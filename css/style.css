@@ -1,0 +1,477 @@
+/* Katherine McVety — stylesheet */
+
+/* base */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 125%;
+  height: 100%;
+  overflow-y: scroll; /* keeps nav width stable between pages */
+}
+
+body {
+  height: 100%;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Playfair Display', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* logo (bottom-left K square) */
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.logo span {
+  color: #ffffff;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+}
+
+
+/* nav header — fixed, same on every page */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 60px 14px;
+  background: #ffffff;
+}
+
+.site-header .site-title {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.site-header .nav-links {
+  display: flex;
+  gap: 52px;
+  list-style: none;
+}
+
+.site-header .nav-links a {
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111111;
+  padding-bottom: 2px;
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active {
+  border-bottom-color: #111111;
+}
+
+
+/* home page */
+
+.index-page {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-content {
+  margin-top: 88px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 52vh;
+  margin-bottom: 40px;
+}
+
+.featured-photo img {
+  position: absolute;
+  max-height: 52vh;
+  max-width: 72vw;
+  width: auto;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.contact-line {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #111111;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-line button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.copy-confirm {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #cccccc;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.copy-confirm.show {
+  opacity: 1;
+}
+
+
+/* inner pages (portfolios, bio) */
+
+.page-body {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.portfolios-page {
+  padding: 48px 80px 100px;
+}
+
+
+/* portfolios */
+
+.portfolio-section {
+  margin-bottom: 72px;
+}
+
+.portfolio-section h2 {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: #111111;
+}
+
+.portfolio-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 22px;
+}
+
+.portfolio-item.hidden {
+  display: none;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1100px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 860px)  { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 580px)  { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 380px)  { .portfolio-grid { grid-template-columns: 1fr; } }
+
+.portfolio-item {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* placeholder shown before the image loads */
+.portfolio-item::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio placeholder */
+  background: #f0f0f0;
+  background-image: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+/* once the image loads, hide the placeholder */
+.portfolio-item.loaded::before {
+  display: none;
+}
+
+.portfolio-item img {
+  display: none; /* hidden until loaded */
+  width: 100%;
+  height: auto;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-item.loaded img {
+  display: block;
+}
+
+.portfolio-item:hover img {
+  opacity: 0.82;
+}
+
+.expand-btn {
+  display: block;
+  margin: 10px auto 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #888888;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.expand-btn:hover {
+  color: #111111;
+}
+
+
+/* animated underline — used on nav links, contact button, expand button */
+/* the underline starts at 0 width in the center and slides outward on hover */
+
+.site-header .nav-links a,
+.contact-line button,
+.expand-btn {
+  position: relative;
+  border-bottom: none;
+}
+
+.site-header .nav-links a::after,
+.contact-line button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #111111;
+  transition: width 0.25s ease, left 0.25s ease;
+}
+
+.expand-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #111111;
+  transition: width 0.25s ease, left 0.25s ease;
+}
+
+.site-header .nav-links a:hover::after,
+.site-header .nav-links a.active::after,
+.contact-line button:hover::after,
+.expand-btn:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+/* bio */
+
+.bio-page {
+  padding: 48px 0 100px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.bio-page h2 {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #111111;
+}
+
+.bio-page p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #1a1a1a;
+  margin-bottom: 22px;
+}
+
+
+/* lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 84vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.lightbox-caption {
+  margin-top: 14px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  pointer-events: none;
+  min-height: 1.4em;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 26px;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #1f1f1f;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+  padding: 20px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-arrow:hover { color: #1f1f1f; }
+.lightbox-arrow.prev  { left: 12px; }
+.lightbox-arrow.next  { right: 12px; }
+
+
+/* mobile */
+
+@media (max-width: 700px) {
+  html { font-size: 100%; }
+
+  .site-header {
+    padding: 14px 20px 10px;
+  }
+
+  .site-header .site-title {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+
+  .site-header .nav-links {
+    gap: 28px;
+  }
+
+  .logo {
+    bottom: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .logo span {
+    font-size: 10px;
+  }
+
+  .page-body {
+    padding-top: 80px;
+  }
+
+  .portfolios-page {
+    padding: 28px 16px 60px;
+  }
+
+  .bio-page {
+    padding: 28px 16px 60px;
+    max-width: 100%;
+  }
+
+  .lightbox-arrow {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
