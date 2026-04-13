@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Katherine McVety</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/jpeg" href="../assets/favicon.jpg" />
+</head>
+<body class="page-body">
+
+  <a href="/" class="logo" title="Katherine McVety"><span>K</span></a>
+
+  <header class="site-header">
+    <a href="/" class="site-title">Katherine McVety</a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Work</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><button class="nav-contact-btn" onclick="copyEmail()">Contact</button><span class="copy-confirm-nav" id="copyConfirmNav">Email copied</span></li>
+    </ul>
+  </header>
+
+
+  <main class="work-page page-content" id="workContainer">
+    <p class="load-msg">Loading&hellip;</p>
+  </main>
+
+  <!-- Slideshow overlay -->
+  <div class="slideshow-overlay" id="slideshowOverlay">
+    <div class="slideshow-portfolio-nav">
+      <button class="portfolio-arrow" id="portfolioPrev" aria-label="Previous portfolio"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="4" x2="8" y2="14"/><line x1="8" y1="14" x2="18" y2="24"/></svg></button>
+      <div class="slideshow-portfolio-name" id="slideshowPortfolioName"></div>
+      <button class="portfolio-arrow" id="portfolioNext" aria-label="Next portfolio"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="4" x2="20" y2="14"/><line x1="20" y1="14" x2="10" y2="24"/></svg></button>
+    </div>
+    <button class="slideshow-close" id="slideshowClose">&times;</button>
+    <button class="slideshow-arrow prev" id="slideshowPrev"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="4" x2="8" y2="14"/><line x1="8" y1="14" x2="18" y2="24"/></svg></button>
+    <div class="slideshow-main">
+      <img id="slideshowImg" src="" alt="" />
+      <span class="slideshow-caption" id="slideshowCaption"></span>
+    </div>
+    <button class="slideshow-arrow next" id="slideshowNext"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="4" x2="20" y2="14"/><line x1="20" y1="14" x2="10" y2="24"/></svg></button>
+    <div class="slideshow-strip" id="slideshowStrip"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/work.js"></script>
+</body>
+</html>

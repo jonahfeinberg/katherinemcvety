@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katherine McVety</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg" />
+</head>
+<body class="index-page">
+
+  <a href="#" class="logo" title="Katherine McVety"><span>K</span></a>
+
+  <header class="site-header">
+    <a href="#" class="site-title">Katherine McVety</a>
+    <ul class="nav-links">
+      <li><a href="work/">Work</a></li>
+      <li><a href="about/">About</a></li>
+      <li><button class="nav-contact-btn" onclick="copyEmail()">Contact</button><span class="copy-confirm-nav" id="copyConfirmNav">Email copied</span></li>
+    </ul>
+  </header>
+
+  <div class="index-content page-content">
+    <div class="featured-photo" id="featuredPhoto">
+      <img src="media/Middle%20Landscape/2.Chicken%20Shed%232_result.jpg" alt="Featured photograph" onclick="openLightbox(this.src, '', [])" />
+    </div>
+  </div>
+
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <button class="lightbox-arrow prev" id="lightboxPrev"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="4" x2="8" y2="14"/><line x1="8" y1="14" x2="18" y2="24"/></svg></button>
+    <div class="lightbox-inner" id="lightboxInner">
+      <img id="lightboxImg" src="" alt="" />
+      <span class="lightbox-caption" id="lightboxCaption"></span>
+    </div>
+    <button class="lightbox-arrow next" id="lightboxNext"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="4" x2="20" y2="14"/><line x1="20" y1="14" x2="10" y2="24"/></svg></button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/slideshow.js"></script>
+</body>
+</html>
