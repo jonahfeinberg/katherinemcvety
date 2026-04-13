@@ -1,0 +1,98 @@
+{
+  "portfolios": [
+    {
+      "name": "Phenological Memory: Dispersal",
+      "folder": "Phenological Memory(colon) Dispersal",
+      "description": "An examination of seed dispersal mechanisms and the quiet strategies plants use to propagate across landscapes.",
+      "images": [
+        { "thumbnail": "TN_Asclepias syriaca (Common milkweed seed)#1.jpg" },
+        { "image": "TN_Asclepias syriaca (Common milkweed seed)#1.jpg" },
+        { "image": "Juglans nigra (Black walnut)#_2.jpg" },
+        { "image": "Asclepias syriaca (Common milkweed)#_3.jpg" },
+        { "image": "Typha latifolia (Broadleaf cattail)#_4.jpg" },
+        { "image": "Rhus typhina (Staghorn sumac)#_5.jpg" },
+        { "image": "Panicum virgatum (Switchgrass)#_6.jpg" },
+        { "image": "Senna hebecarpa (Wild senna)_7.jpg" },
+        { "image": "Pinus lambertiana (Sugar pine) Pacific Coast_8.jpg" },
+        { "image": "Senecio vukgaris (Common groundsel) naturalized#_9.jpg" },
+        { "image": "Phytolacca americana (Pokeweed)#_11.jpg" }
+      ]
+    },
+    {
+      "name": "Middle Landscape",
+      "folder": "Middle Landscape",
+      "description": "Photographs from the working agricultural and domestic landscapes of Lincoln, Massachusetts.",
+      "images": [
+        { "thumbnail": "1.TH_Piglet Barn#1.jpg" },
+        { "image": "1.TH_Piglet Barn#1.jpg" },
+        { "image": "2.Chicken Shed#2.jpg" },
+        { "image": "3.Backyard Sugaring#3.jpg" },
+        { "image": "4.Night Boil#4.jpg" },
+        { "image": "5.Kitchen Compost#5.jpg" },
+        { "image": "6.Kiddie Pool, Maine Coast#6.jpg" },
+        { "image": "7.Dead Blue Jay (Collision Window)#7.jpg" },
+        { "image": "8.Dead Coyote (Collision Car)#8.jpg" },
+        { "image": "9.Ice Fishing, Walden Pond#9.jpg" },
+        { "image": "10.Walden Pond#10.jpg" },
+        { "image": "11.Bench at Great Meadows#11.jpg" },
+        { "image": "12.Ponies#12.jpg" },
+        { "image": "13.Havahart Traps#13.jpg" },
+        { "image": "14.Wrapped Boat, Concord, MA#14.jpg" },
+        { "image": "15.Boardwalk#15.jpg" },
+        { "image": "16.Dock#16.jpg" },
+        { "image": "17.Winter Solstice, Full Moon Over Farm#17.jpg" }
+      ]
+    },
+    {
+      "name": "Zoo",
+      "folder": "Zoo",
+      "description": "Animals observed in captivity across North America, Europe, and the Middle East.",
+      "images": [
+        { "thumbnail": "Hippo Family_Cincinnati, OH#1TN.jpg" },
+        { "image": "Hippo Family, Cincinnati, OH#1TN.jpg" },
+        { "image": "Lynx, Belgrade, Serbia#2.jpg" },
+        { "image": "Red Billed Blue Magpie, New York#3.jpg" },
+        { "image": "Polar Bears, Minneapolis, MN#4.jpg" },
+        { "image": "Gecko, Saint Louis, MO#5.jpg" },
+        { "image": "Spotting Puffins, Montreal#6.jpg" },
+        { "image": "Princess Searching for Otter, Montreal#7.jpg" },
+        { "image": "Peacocks, NYC#8.jpg" },
+        { "image": "Coney Island Guys.jpg" },
+        { "image": "Belgrade Zoo, Serbia#10.jpg" },
+        { "image": "Penguins, NYC#11.jpg" },
+        { "image": "Pygmy Hippo, Dubai#11.jpg" },
+        { "image": "Lion Enclosure, Kansas City#12.jpg" },
+        { "image": "Giraffes Are Outside, Illinois#13.jpg" },
+        { "image": "Beaver Lodge. St. Paul#14.jpg" },
+        { "image": "Dust Supression, Woodlands, Dubai#15.jpg" },
+        { "image": "Arctic Wolf, Belgrade, Serbia#16jpg.jpg" },
+        { "image": "Reindeer, Melrose, MA#17.jpg" },
+        { "image": "Stingray, Columbus, OH#18.jpg" }
+      ]
+    },
+    {
+      "name": "People",
+      "folder": "People",
+      "description": "Portraits and candid observations of people at work, rest, and ritual — from New England living rooms to Mongolian steppe ceremonies.",
+      "images": [
+        { "thumbnail": "Sleeping New York, NY#1TN.jpg" },
+        { "image": "Sleeping New York, NY#1TN.jpg" },
+        { "image": "Working, Chicago#2.jpg" },
+        { "image": "Piano Practice#3.jpg" },
+        { "image": "Man in Window, San Jose, CA#4.jpg" },
+        { "image": "Reading, Vermont#5.jpg" },
+        { "image": "Restoring Temple Mural#6.jpg" },
+        { "image": "May Day with Sun Yat-sen, Tiananmen Square, Beijing#7.jpg" },
+        { "image": "Celebrating Fourth of July, Covid Summer#8.jpg" },
+        { "image": "Looking Glass, Long Island#9.jpg" },
+        { "image": "Spectators, Archery Tournament, Ulaanbaatar#10.jpg" },
+        { "image": "Last Place, Horse Race, Ulaanbaatar#11, Mongolia.jpg" },
+        { "image": "Preparing Marmot Stew, Mongolia#17.jpg" },
+        { "image": "Firebreather, Traveling Circus, Beijing#13.jpg" },
+        { "image": "Copying Prayers, Hengshan, Hunan Province, China 1997#14.jpg" },
+        { "image": "Pilgrimage, Tibet#15.jpg" },
+        { "image": "Young Taoist Monk, Hengshan, Hunan#16.jpg" }
+      ]
+    }
+  ]
+}
